@@ -1,6 +1,10 @@
 services:
-  backend:
-    build: .
-    container_name: biztech_mlops-backend
-    ports:
-      - "8000:8000"
+  - type: web
+    name: ai-worker-dashboard
+    env: docker
+    plan: free
+    region: oregon
+    # This maps Render's public URL to your internal port
+    envVars:
+      - key: PORT
+        value: 8000
