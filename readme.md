@@ -1,6 +1,6 @@
 # AI Worker Productivity Dashboard
 
-A full-stack web application that ingests AI-generated factory events, stores them in a database, computes metrics, and displays them in a dashboard.
+A full-stack web application that ingests AI-generated factory events, stores them in a database, computes metrics, and displays them in a professional dashboard.
 
 ---
 
@@ -12,10 +12,10 @@ biztech_mlops/
 │   ├── main.py
 │   ├── database.py
 │   ├── models.py
-│   ├── schemas.py
-│   ├── seed.py
-│   ├── metrics.py
-│   └── requirements.txt
+   ├── schemas.py
+   ├── seed.py
+   ├── metrics.py
+   └── requirements.txt
 ├── frontend/
 │   ├── index.html
 │   ├── style.css
@@ -27,29 +27,37 @@ biztech_mlops/
 
 ---
 
-## ▶️ Step 1 — Run Project Locally with Docker
-
-### 1.1 Navigate to project folder
+## ▶ Step 0 — Clone the Repository
 
 ```bash
-cd biztech_mlops
+git clone https://github.com/Ganga522/MLOps-Project.git
+cd MLOps-Project
 ```
 
-### 1.2 Build and start backend
+---
+
+## ▶ Step 1 — Backend Setup (FastAPI + Docker)
+
+### 1.1 Build and start the backend using Docker
 
 ```bash
 docker-compose up --build
 ```
 
-### 1.3 Backend API URL
+### 1.2 Backend API URLs
 
 * Swagger UI: `http://localhost:8000/docs`
 * Health Check: `http://localhost:8000/health`
-* Metrics: `/workers`, `/workstations`, `/factory`
+* Worker Metrics: `http://localhost:8000/metrics/workers`
+* Workstation Metrics: `http://localhost:8000/metrics/workstations`
+* Factory Metrics: `http://localhost:8000/metrics/factory`
+* Reseed Dummy Data: `http://localhost:8000/seed`
+
+> ✅ Make sure the backend container is running before accessing these endpoints.
 
 ---
 
-## ▶ Step 2 — Run Frontend
+## ▶ Step 2 — Frontend Setup
 
 ### 2.1 Navigate to frontend folder
 
@@ -63,16 +71,25 @@ cd frontend
 python -m http.server 3000
 ```
 
-### 2.3 Frontend URL
+### 2.3 Frontend Dashboard URL
 
 ```
 http://localhost:3000
 ```
 
-Open this in your browser to see the dashboard.
+Open this URL in your browser to view the dashboard.
 
-> ⚠️ Make sure the API URL in `app.js` matches your backend URL:
 
-```javascript
-const API = "http://localhost:8000";
-```
+
+## ✅ Key Notes
+
+* Ensure Docker is installed and running for backend.
+* Frontend must point to the correct backend URL.
+* Dummy data is auto-seeded at backend startup.
+* Use `/seed` API to refresh dummy data anytime.
+
+---
+
+**Author:** K. Gangadhar
+
+**Role Applied:** Full-Stack MLOps Engineer
