@@ -1,0 +1,89 @@
+body{
+  margin:0;
+  font-family: 'Segoe UI', Arial;
+  background:#f2f5f9;
+  color:#1f2937;
+}
+
+.header{
+  background:#0f172a;
+  color:white;
+  padding:20px;
+  text-align:center;
+  font-size:24px;
+  font-weight:600;
+}
+
+.container{
+  padding:30px;
+}
+
+.section-title{
+  font-size:20px;
+  margin:25px 0 10px;
+  font-weight:600;
+}
+
+.factory-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.metric-card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  text-align:center;
+}
+
+.metric-title{
+  font-size:14px;
+  color:#64748b;
+}
+
+.metric-value{
+  font-size:26px;
+  font-weight:700;
+  margin-top:8px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.card{
+  background:white;
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  transition:0.2s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.1);
+}
+
+.card h3{
+  margin:0 0 10px;
+  color:#0f172a;
+}
+
+.data-row{
+  display:flex;
+  justify-content:space-between;
+  margin:6px 0;
+  font-size:14px;
+}
+
+.badge{
+  background:#e0f2fe;
+  color:#0369a1;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
+}
